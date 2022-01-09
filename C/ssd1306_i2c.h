@@ -10,7 +10,7 @@ extern int i2cd;
 /**********Select display temperature type**************/
 #define CELSIUS       0
 #define FAHRENHEIT    1
-#define TEMPERATURE_TYPE  FAHRENHEIT
+#define TEMPERATURE_TYPE  CELSIUS
 /**********Select display temperature type**************/
 
 /**********Select display network IP type**************/
@@ -23,7 +23,7 @@ extern int i2cd;
 #define IP_DISPLAY_OPEN     0
 #define IP_DISPLAY_CLOSE    1
 #define IP_SWITCH       IP_DISPLAY_OPEN
-#define CUSTOM_DISPLAY   "UCTRONICS"
+#define CUSTOM_DISPLAY   ""
 /************************Turn off the IP display. Can customize the display****************/
 
 #define BLACK 0
@@ -44,13 +44,13 @@ void OLED_Set_Pos(unsigned char x, unsigned char y);
 void OLED_WR_Byte(unsigned dat,unsigned cmd);  
 void Write_IIC_Data(unsigned char IIC_Data);
 void Write_IIC_Command(unsigned char IIC_Command);
-void OLED_DrawBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[][1024],unsigned char);
-void OLED_DrawPartBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[][1024],unsigned char);
+void OLED_DrawBMP();
+void OLED_DrawPartBMP(unsigned char x0, unsigned char y0,unsigned char x1, unsigned char y1,unsigned char BMP[1024]);
 void OLED_Clear(void);
 void OLED_ClearLint(unsigned char,unsigned char);
 void OLED_ShowNum(unsigned char,unsigned char,unsigned int,unsigned char,unsigned char);
 unsigned int oled_pow(unsigned char,unsigned char);
-void LCD_Display(unsigned char symbol);
+void LCD_Display();
 void LCD_DisPlayCpuSdMemory(void);
 void FirstGetIpAddress(void);
 char* GetIpAddress(void);
