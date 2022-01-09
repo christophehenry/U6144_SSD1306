@@ -28,5 +28,14 @@ cd U6144_SSD1306/C
 ./display 
 ```
 
+## Install
+
+```bash
+make
+make install
+```
+
+This will compile, install the gennerated binary under `/usr/bin/uc_display` and installl and activate a systemd service.
+
 
 
